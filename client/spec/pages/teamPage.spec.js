@@ -17,9 +17,10 @@ describe('Check-in dance', function() {
     });
 
 
-     it('should include the text "Nidhi Solanki"', function() {
+    it('should include the text "Nidhi Solanki"', function() {
       expect(page.$el).toContainText('Nidhi Solanki');
     }); 
+
     it('should include the text "Jacqui Shadforth"', function() {
       expect(page.$el).toContainText('Jacqui Shadforth');
     });
