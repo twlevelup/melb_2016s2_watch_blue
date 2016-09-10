@@ -31,10 +31,6 @@ describe('Check-in dance', function() {
       expect(page.$el).toContainText('Jemal');
     });
 
-    it('should include the text "Jacqueline Shadforth"', function() {
-      expect(page.$el).toContainText('Jacqueline Shadforth');
-    });
-
     it('should include Diane', function() {
       expect(page.$el).toContainText('Diane');
     });
@@ -42,6 +38,19 @@ describe('Check-in dance', function() {
     it('should include Adrian', function() {
       expect(page.$el).toContainText('Adrian');
     });
+
+    it('should include Sarah', function() {
+      expect(page.$el).toContainText('Sarah');
+    });
+
+    it('should include Zehan', function() {
+      expect(page.$el).toContainText('Zehan');
+    });
+
+    it('should include Biondi', function() {
+      expect(page.$el).toContainText('Biondi');
+    });
+
 
   });
 });

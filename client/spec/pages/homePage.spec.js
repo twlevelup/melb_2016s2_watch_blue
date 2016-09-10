@@ -58,4 +58,13 @@ describe('The Home Page', function() {
 
   });
 
+  describe('left', function () {
+    it('should take the user to the demo page', function () {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('left');
+        expect(window.App.navigate).toHaveBeenCalledWith('demo');
+    });
+  });
+
 });

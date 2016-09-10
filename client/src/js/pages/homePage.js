@@ -11,7 +11,12 @@ var homePage = Page.extend({
   buttonEvents: {
     right: 'goToContacts',
     top: 'scrollUp',
-    bottom: 'scrollDown'
+    bottom: 'scrollDown',
+    left: 'goToMyDemoPage'
+  },
+
+  goToMyDemoPage: function() {
+      window.App.navigate('demo');
   },
 
   goToContacts: function() {
