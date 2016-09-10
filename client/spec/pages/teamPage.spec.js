@@ -17,6 +17,8 @@ describe('Check-in dance', function() {
     });
 
     // TODO: Add a test to check for your name
-
+     it('should include the text "Nidhi Solanki"', function() {
+      expect(page.$el).toContainText('Nidhi Solanki');
+    }); 
   });
 });
