@@ -31,7 +31,6 @@ describe('Check-in dance', function() {
       expect(page.$el).toContainText('Jemal');
     });
 
-    });
     it('should include the text "Jacqueline Shadforth"', function() {
       expect(page.$el).toContainText('Jacqueline Shadforth');
     });
