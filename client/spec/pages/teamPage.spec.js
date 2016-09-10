@@ -15,8 +15,8 @@ describe('Check-in dance', function() {
     it('should include the text "Made by:"', function() {
       expect(page.$el).toContainText('Made by:');
     });
-
-    // TODO: Add a test to check for your name
-
+    it('should include Adrian', function() {
+      expect(page.$el).toContainText('Adrian');
+    });
   });
 });
