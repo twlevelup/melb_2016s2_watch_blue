@@ -1,6 +1,6 @@
 # LevelUp Watch Edition App Development Environment
 
-[![Build Status](https://snap-ci.com/twlevelup/watch_edition/branch/master/build_image)](https://snap-ci.com/twlevelup/watch_edition/branch/master)
+  [![Build Status](https://snap-ci.com/twlevelup/melb_2016s2_watch_blue/branch/master/build_image)](https://snap-ci.com/twlevelup/melb_2016s2_watch_blue/branch/master)
 
 This git repo contains all the code you need to prototype apps for the Proto Watch.
 
@@ -12,14 +12,17 @@ See the [Installation Instructions](https://github.com/twlevelup/watch_edition/w
 
 ## Continuous Integration
 
+This project is continuously deployed to heroku by [SnapCi](https://snap-ci.com/).
+You can view this app at [https://levelup-melb-blue.herokuapp.com/](https://levelup-melb-blue.herokuapp.com/)
+
 ### Before you commit
 
 1. Check the CI build, do not commit unless it's passing!
 2. Run ```git pull --rebase```
 3. Fix any merge conflicts
-4. Run  
-```./go pre-commit``` (OS X)  
-```npm -s run test``` (Windows)  
+4. Run
+```./go pre-commit``` (OS X)
+```npm -s run test``` (Windows)
 ```docker-compose -f docker-compose.test.yml up``` (Docker)
 4. Fix any errors
 5. Run ```git push```
