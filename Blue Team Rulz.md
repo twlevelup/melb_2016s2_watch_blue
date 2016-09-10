@@ -9,8 +9,8 @@
 * __HAVE FUN__
 
 ## Commitment ##
-* Put in your best effot, contribute and be present
-* Take responsbility (ask for help if you are stuck)
+* Put in your best effort, contribute and be present
+* Take responsibility (ask for help if you are stuck)
 
 ## Best Practice ##
 
@@ -22,5 +22,5 @@
 * Comment your code for other people
 
 ### XD/BA ###
-* Be realistic, make sure the tasks are feasibile for the devs
+* Be realistic, make sure the tasks are feasible for the devs
 * Be specific when writing the requirements (and understandable)
