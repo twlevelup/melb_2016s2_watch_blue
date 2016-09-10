@@ -16,12 +16,20 @@ describe('Check-in dance', function() {
       expect(page.$el).toContainText('Made by:');
     });
 
+
      it('should include the text "Nidhi Solanki"', function() {
       expect(page.$el).toContainText('Nidhi Solanki');
     }); 
     it('should include the text "Jacqui Shadforth"', function() {
       expect(page.$el).toContainText('Jacqui Shadforth');
     });
+
+    it('should include the text Jessie', function() {
+      expect(page.$el).toContainText('Jessie');
+    });
+
+    // TODO: Add a test to check for your name
+
 
   });
 });
