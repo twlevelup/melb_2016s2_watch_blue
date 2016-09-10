@@ -30,5 +30,15 @@ describe('Check-in dance', function() {
     it('should include the text Jemal', function() {
       expect(page.$el).toContainText('Jemal');
     });
+
+    });
+    it('should include the text "Jacqueline Shadforth"', function() {
+      expect(page.$el).toContainText('Jacqueline Shadforth');
+    });
+
+    it('should include Diane', function() {
+      expect(page.$el).toContainText('Diane');
+    });
+
   });
 });
