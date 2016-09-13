@@ -51,6 +51,5 @@ describe('Check-in dance', function() {
       expect(page.$el).toContainText('Biondi');
     });
 
-
   });
 });

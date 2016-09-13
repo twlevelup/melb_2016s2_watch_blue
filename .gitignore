@@ -8,6 +8,7 @@
 *.iws
 .idea_modules/
 .tags*
+.vscode/
 
 # Node
 node_modules/

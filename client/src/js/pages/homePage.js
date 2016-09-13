@@ -12,11 +12,11 @@ var homePage = Page.extend({
     right: 'goToContacts',
     top: 'scrollUp',
     bottom: 'scrollDown',
-    left: 'goToMyDemoPage'
+    left: 'goToAbout'
   },
 
-  goToMyDemoPage: function() {
-      window.App.navigate('demo');
+  goToAbout: function() {
+    window.App.navigate('about');
   },
 
   goToContacts: function() {

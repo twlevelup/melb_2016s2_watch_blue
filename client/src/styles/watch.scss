@@ -108,3 +108,37 @@
   left:1em;
   width:230px;
 }
+
+/* About page */
+div#about.page {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+  div#about.page .container1 {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+  }
+
+  div#about.page .container1 p {
+    margin: 0 0 0 5px;
+  }
+
+  div#about.page h1 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-left: -5px;
+  }
+
+div#about .blue {
+  color: #69D2E7;
+}
+
+div#about .orange {
+  color: #FF922A;
+}
+
+div#about .megaman {
+  width: 70px;
+}
