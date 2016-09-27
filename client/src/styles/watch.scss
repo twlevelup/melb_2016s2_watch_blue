@@ -142,3 +142,23 @@ div#about .orange {
 div#about .megaman {
   width: 70px;
 }
+
+/* Quiz page */
+.small {
+  margin: 0 auto;
+  width: 80px;
+}
+
+#shape-scroll {
+  width: 500px;
+  border: 1px solid red;
+  transition: 4s;
+  -webkit-transition: 4s;
+  -moz-transition: 4s;
+  position: absolute;
+  right:calc(100% - 50px);
+}
+
+#shape-scroll:hover {
+  right: -300px;
+}

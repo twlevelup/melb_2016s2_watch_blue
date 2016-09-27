@@ -10,13 +10,18 @@ var homePage = Page.extend({
 
   buttonEvents: {
     right: 'goToContacts',
-    top: 'scrollUp',
+    top: 'goToQuiz',
     bottom: 'scrollDown',
     left: 'goToAbout'
   },
 
   goToAbout: function() {
     window.App.navigate('about');
+  },
+
+  /* TODO: Nidhi and Jacqui create quiz question page */
+  goToQuiz: function() {
+    window.App.navigate('quiz');
   },
 
   goToContacts: function() {
