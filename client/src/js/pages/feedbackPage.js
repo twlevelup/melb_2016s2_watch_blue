@@ -7,27 +7,27 @@ var feedbackPage = Page.extend({
 
   });
 
-  module.exports = feedbackPage;
+module.exports = feedbackPage;
 
 //Accept w
-var isCorrect = TRUE;
-var correctAnswer = ["Good Job!","Awesome!","Excellent!", "You're Rad!"];
-var incorrectAnswer = ["Try Again!","Better Luck Next Time!","OOPPS!"];
+var isCorrect = true;
+var correctAnswer = ['Good Job!','Awesome!','Excellent!', 'You\'re Rad!'];
+var incorrectAnswer = ['Try Again!','Better Luck Next Time!','OOPPS!'];
 
-//generating a random number between 0-3
-if(isCorrect)
-  chooseAnswer(correctAnswer);
-else {
-    chooseAnswer(incorrectAnswer);
-}
-
-
-function chooseAnswer(answer){
-  var randomNum = Math.floor(Math.random()*10);
+function chooseAnswer(answer) {
+  var randomNum = Math.floor(Math.random() * 10);
   return randomNum % answer.length;
 }
 
-function displayAnswer(){
+//generating a random number between 0-3
+if (isCorrect) {
+  chooseAnswer(correctAnswer);
+} else {
+  chooseAnswer(incorrectAnswer);
+}
+
+function displayAnswer() {
   var index = chooseAnswer();
+
   //TODO display a specific response
 }
