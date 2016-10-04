@@ -9,25 +9,30 @@ var feedbackPage = Page.extend({
 
 module.exports = feedbackPage;
 
-//Accept w
+
 var isCorrect = true;
 var correctAnswer = ['Good Job!','Awesome!','Excellent!', 'You\'re Rad!'];
 var incorrectAnswer = ['Try Again!','Better Luck Next Time!','OOPPS!'];
 
-function chooseAnswer(answer) {
-  var randomNum = Math.floor(Math.random() * 10);
-  return randomNum % answer.length;
-}
-
 //generating a random number between 0-3
-if (isCorrect) {
-  chooseAnswer(correctAnswer);
-} else {
-  chooseAnswer(incorrectAnswer);
+
+  displayAnswer();
+
+//input array and randomly output the index
+function chooseAnswer(correctAnswer) {
+  var randomNum = Math.floor(Math.random() * 10);
+  return randomNum % correctAnswer.length;
 }
 
 function displayAnswer() {
-  var index = chooseAnswer();
+  //message from random number generator
+  if(isCorrect){
+    var index=chooseAnswer(correctAnswer);
+    document.write(correctAnswer[index]);
+  }else{
+    var index=chooseAnswer(incorrectAnswer);
+    document.write(incorrectAnswer[index]);
+  }
 
   //TODO display a specific response
 }
