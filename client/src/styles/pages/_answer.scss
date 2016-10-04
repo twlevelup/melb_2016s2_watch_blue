@@ -1,0 +1,91 @@
+.answer-page-layout {
+	width: 20px;
+	height: 20px;
+	border-top: 110px solid #bababa;
+	border-right: 110px solid #d3d3d3;
+	border-bottom: 110px solid #bababa;
+	border-left: 110px solid #d3d3d3;
+}
+
+.clicked-top {
+	border-top: 110px solid #666666;
+}
+
+.clicked-right {
+	border-right: 110px solid #666666;
+}
+
+.clicked-bottom {
+	border-bottom: 110px solid #666666;
+}
+
+.clicked-left {
+	border-left: 110px solid #666666;
+}
+
+#counter {
+}
+
+#circle {
+	position: absolute;
+	z-index: 99;
+	top: 30px;
+	left: 50%;
+
+	background: purple;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+#square {
+	position: absolute;
+	z-index: 99;
+	top: 50%;
+	left: 50px;
+
+	margin: -10px 0 0 0;
+
+	width: 35px; 
+	height: 35px; 
+	background: red; 
+}
+
+#triangle {
+	position: absolute;
+	z-index: 99;
+	bottom: 20px;
+	left: 50%;
+	margin: -20px 0 0 0;
+
+	width: 0; 
+	height: 0; 
+	border-bottom: 40px solid yellow; 
+	border-left: 20px solid transparent; 
+	border-right: 20px solid transparent; 
+}
+
+#diamond {
+	position: absolute;
+	z-index: 99;
+	top: 50%;
+	right: 10px;
+
+	margin: 1px 0 0 18px;
+
+	width: 33px; 
+	height: 33px; 
+	background: green;
+	/* Rotate */
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	/* Rotate Origin */
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}

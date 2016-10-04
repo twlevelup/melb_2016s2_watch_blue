@@ -16,12 +16,12 @@ describe('The Answer Page', function() {
             });
 
           // TODO: Put different selections in answer page
-          // it('should produce the selection', function() {
-          //     page.render();
-          //     expect(page.$el).toContainText('square');
-          //     expect(page.$el).toContainText('triangle');
-          //     expect(page.$el).toContainText('diamond');
-          //     expect(page.$el).toContainText('circle');
-          //   });
+          it('should produce the selection', function() {
+              page.render();
+              expect(page.$el).toContainHtml('<div id="square"></div>');
+              expect(page.$el).toContainHtml('<div id="triangle"></div>');
+              expect(page.$el).toContainHtml('<div id="diamond"></div>');
+              expect(page.$el).toContainHtml('<div id="circle"></div>');
+            });
         });
   });
