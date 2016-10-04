@@ -10,7 +10,7 @@ var homePage = Page.extend({
 
   buttonEvents: {
     right: 'goToContacts',
-    top: 'goToQuiz',
+    top: 'scrollUp',
     bottom: 'scrollDown',
     left: 'goToAbout'
   },
