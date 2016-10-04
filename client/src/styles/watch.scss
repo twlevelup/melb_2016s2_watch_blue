@@ -145,20 +145,16 @@ div#about .megaman {
 
 /* Quiz page */
 .small {
-  margin: 0 auto;
-  width: 80px;
+  margin: 0 10px 0 0;
+  width: 120px;
 }
 
 #shape-scroll {
-  width: 500px;
-  border: 1px solid red;
-  transition: 4s;
-  -webkit-transition: 4s;
-  -moz-transition: 4s;
+  width: 520px;
+  animation-timing-function: linear;
+  transition: 6s;
+  -webkit-transition: 6s;
+  -moz-transition: 6s;
   position: absolute;
-  right:calc(100% - 50px);
-}
-
-#shape-scroll:hover {
-  right: -300px;
+  right: -700px;
 }
