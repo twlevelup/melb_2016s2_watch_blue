@@ -29,6 +29,22 @@ var answerPage = Page.extend({
 
     // TODO: check whether the answer is correct or not
     checkAnswer: function(input) {
+    },
+
+    diamond: function() {
+      checkAnswer('diamond');
+    },
+
+    square: function() {
+      checkAnswer('square');
+    },
+
+    circle: function() {
+      checkAnswer('circle');
+    },
+
+    triangle: function() {
+      checkAnswer('triangle');
     }
 
   });
