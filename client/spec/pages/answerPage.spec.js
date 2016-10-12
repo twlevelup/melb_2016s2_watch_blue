@@ -6,8 +6,8 @@ var AnswerPage = require('../../src/js/pages/answerPage'),
 describe('The Answer Page', function() {
 
     beforeEach(function() {
-        page = new AnswerPage();
-      });
+      page = new AnswerPage();
+    });
 
     describe('rendering', function() {
       it('should produce the default counter', function() {
@@ -16,21 +16,52 @@ describe('The Answer Page', function() {
       });
 
       // TODO: Put different selections in answer page
-      it('should produce the selection', function() {
+      it('should produce the square', function() {
         page.render();
         expect(page.$el).toContainHtml('<div id="square"></div>');
+      });
+
+      it('should produce the triangle', function() {
+        page.render();
         expect(page.$el).toContainHtml('<div id="triangle"></div>');
+      });
+
+      it('should produce the diamond', function() {
+        page.render();
         expect(page.$el).toContainHtml('<div id="diamond"></div>');
+      });
+
+      it('should produce the circle', function() {
+        page.render();
         expect(page.$el).toContainHtml('<div id="circle"></div>');
       });
     });
 
     describe('accepting input', function() {
       describe('given the question is [D,S,T,T]', function() {
+        beforeEach(function() {
+          page.question = ['diamond','square','triangle','triangle'];
+        });
+
         describe('and the index is 1', function() {
+          beforeEach(function() {
+            page.currentIndex = 1;
+          });
+
           describe('when diamond is clicked', function() {
-            it('will still stay on the answer page');
-            it('the index is incremented by 1');
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.diamond();
+            });
+
+            it('will still stay on the answer page', function() {
+              expect(window.App.navigate).not.toHaveBeenCalled();
+            });
+
+            it('the index is 2', function() {
+              expect(page.currentIndex).toEqual(2);
+            });
+          });
         });
       });
     });

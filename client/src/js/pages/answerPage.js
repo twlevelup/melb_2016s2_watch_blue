@@ -12,9 +12,9 @@ var answerPage = Page.extend({
 
     buttonEvents: {
       right: 'diamond',
-      top: 'square',
-      bottom: 'circle',
-      left: 'triangle'
+      top: 'circle',
+      bottom: 'triangle',
+      left: 'square'
     },
 
     render: function() {
@@ -22,29 +22,15 @@ var answerPage = Page.extend({
         return this;
       },
 
-    // receive the question
-    setQuestion: function(question) {
-      this.question = question;
-    },
-
     // TODO: check whether the answer is correct or not
     checkAnswer: function(input) {
+      if (input === this.question[this.currentIndex - 1]) {
+        this.currentIndex += 1;
+      }
     },
 
     diamond: function() {
-      checkAnswer('diamond');
-    },
-
-    square: function() {
-      checkAnswer('square');
-    },
-
-    circle: function() {
-      checkAnswer('circle');
-    },
-
-    triangle: function() {
-      checkAnswer('triangle');
+      this.checkAnswer('diamond');
     }
 
   });
