@@ -62,7 +62,91 @@ describe('The Answer Page', function() {
               expect(page.currentIndex).toEqual(2);
             });
           });
+
+          describe('when square is clicked', function() {
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.square();
+            });
+
+            it('will go to the feedback page', function() {
+              expect(window.App.navigate).toHaveBeenCalledWith('feedback');
+            });
+          });
+
+          describe('when triangle is clicked', function() {
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.triangle();
+            });
+
+            it('will go to the feedback page', function() {
+              expect(window.App.navigate).toHaveBeenCalledWith('feedback');
+            });
+          });
+
+          describe('when circle is clicked', function() {
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.circle();
+            });
+
+            it('will go to the feedback page', function() {
+              expect(window.App.navigate).toHaveBeenCalledWith('feedback');
+            });
+          });
+        });
+
+        describe('and the index is 4', function() {
+          beforeEach(function() {
+            page.currentIndex = 4;
+          });
+
+          describe('when triangle is clicked', function() {
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.triangle();
+            });
+
+            it('will go to the feedback page', function() {
+              expect(window.App.navigate).toHaveBeenCalledWith('feedback');
+            });
+          });
+
+          describe('when diamond is clicked', function() {
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.diamond();
+            });
+
+            it('will go to the feedback page', function() {
+              expect(window.App.navigate).toHaveBeenCalledWith('feedback');
+            });
+          });
+
+          describe('when square is clicked', function() {
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.square();
+            });
+
+            it('will go to the feedback page', function() {
+              expect(window.App.navigate).toHaveBeenCalledWith('feedback');
+            });
+          });
+
+          describe('when circle is clicked', function() {
+            beforeEach(function() {
+              spyOn(window.App, 'navigate');
+              page.circle();
+            });
+
+            it('will go to the feedback page', function() {
+              expect(window.App.navigate).toHaveBeenCalledWith('feedback');
+            });
+          });
         });
       });
+
     });
   });

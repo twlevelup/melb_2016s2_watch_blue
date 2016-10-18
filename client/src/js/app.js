@@ -14,6 +14,7 @@ function App() {
   this.router = new Router(pages);
   this.watchFace = new WatchFace();
   this.notificationHandler = new NotificationHandler(notifications);
+  this.data = {};
 }
 
 // TODO move to router?
