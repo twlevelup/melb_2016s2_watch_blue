@@ -47,6 +47,31 @@
 	}
 }
 
+.large {
+	display: block;
+	float: left;
+	width: 130px;
+	height: 130px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.circle {
+	background-image: url('../images/circle.png');
+}
+
+.square {
+	background-image: url('../images/square.png');
+}
+
+.triangle {
+	background-image: url('../images/triangle.png');
+}
+
+.diamond {
+	background-image: url('../images/diamond.png');
+}
+
 #circle {
 	position: absolute;
 	top: 20%;
@@ -106,7 +131,6 @@
 	top: 50%;
 	left: 80%;
 	z-index: 99;
-
 
 	width: 33px; 
 	height: 33px; 

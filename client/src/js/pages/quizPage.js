@@ -2,10 +2,10 @@
 
 var Page = require('watch_framework').Page;
 
-var shapes = ['<img src=\'client/src/images/square.png\' alt=\'square\' class=\'small\'>',
-                '<img src=\'client/src/images/circle.png\' alt=\'circle\' class=\'small\'>',
-                '<img src=\'client/src/images/diamond.png\' alt=\'diamond\' class=\'small\'>',
-                '<img src=\'client/src/images/triangle.png\' alt=\'triangle\' class=\'small\'>'];
+var shapes = ['<div class=\'square large\'>',
+                '<div class=\'circle large\'>',
+                '<div class=\'diamond large\'>',
+                '<div class=\'triangle large\'>'];
 
 var quizPage = Page.extend({
 
