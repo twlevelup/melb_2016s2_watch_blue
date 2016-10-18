@@ -1,38 +1,35 @@
 'use strict';
 
 var Page = require('watch_framework').Page;
+var isCorrect = true;
 var feedbackPage = Page.extend({
 
-    id: 'feedback'
-
-  });
-
-module.exports = feedbackPage;
-
-
-var isCorrect = true;
-var correctAnswer = ['Good Job!','Awesome!','Excellent!', 'You\'re Rad!'];
-var incorrectAnswer = ['Try Again!','Better Luck Next Time!','OOPPS!'];
-
-//generating a random number between 0-3
-
-  displayAnswer();
+  id: 'feedback',
 
 //input array and randomly output the index
-function chooseAnswer(correctAnswer) {
-  var randomNum = Math.floor(Math.random() * 10);
-  return randomNum % correctAnswer.length;
-}
+//chooseAnswer: function() {
+  //},
 
-function displayAnswer() {
+displayAnswer: function(){
   //message from random number generator
   if(isCorrect){
-    var index=chooseAnswer(correctAnswer);
+    var correctAnswer = ['Good Job!','Awesome!','Excellent!', 'You\'re Rad!'];
+    var randomNum = Math.floor(Math.random() * 10);
+    var index = randomNum % correctAnswer.length;
     document.write(correctAnswer[index]);
-  }else{
-    var index=chooseAnswer(incorrectAnswer);
-    document.write(incorrectAnswer[index]);
-  }
+    }
+    else
+      {
+      var index=chooseAnswer(incorrectAnswer);
+      document.write(incorrectAnswer[index]);
+     }
+ },
 
-  //TODO display a specific response
+ render: function() {
+// var incorrectAnswer = ['Try Again!','Better Luck Next Time!','OOPPS!'];
+ this.displayAnswer();
 }
+
+});
+
+module.exports = feedbackPage;

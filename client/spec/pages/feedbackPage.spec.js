@@ -15,9 +15,10 @@ describe('The feedback Page', function() {
         //
         //     expect(feedbackPage.displayAnswer().toHaveArrayOfString(feedbackPage.correctAnswer));
         //   });
-        it('should produce the number between 0 and 3', function() {
-            page.render();
-            expect(feedbackPage.chooseAnswer(['Good Job!','Awesome!','Excellent!', 'You\'re Rad!'])).toBeWithinRange(0,3);
+        // it('should produce the number between 0 and 3', function() {
+        //     page.render();
+        //     var correctAnswer = ['Good Job!','Awesome!','Excellent!', 'You\'re Rad!'];
+        //     expect(feedbackPage.displayAnswer).toBeWithinRange(0,3);
           });
 
       });
