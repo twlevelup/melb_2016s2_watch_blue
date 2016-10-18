@@ -11,7 +11,7 @@ var quizPage = Page.extend({
 
     id: 'quizPage',
     template: require('../../templates/pages/quiz.hbs'),
-    objects: { title: 'Quiz Page' },
+    objects: { title: '' },
     render: function() {
         this.$el.html(this.template(this.objects));
         this.$el.find('#display-shape').html(shapes);
