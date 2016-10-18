@@ -10,5 +10,6 @@ module.exports = {
   eventDetails: require('./eventDetails'),
   about: require('./aboutPage'),
   quiz: require('./quizPage'),
-  answer: require('./answerPage')
+  answer: require('./answerPage'),
+  feedback: require('./feedbackPage')
 };
