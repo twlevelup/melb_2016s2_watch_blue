@@ -5,7 +5,7 @@ var answerPage = Page.extend({
 
     id: 'answer',
     template: require('../../templates/pages/answer.hbs'),
-    objects: { title: 'Answer', currentIndex: 0 },
+    objects: { title: 'Answer', currentIndex: 0, flash: '' },
     question: [],
     isCorrect: false,
     currentIndex: 1,
@@ -44,34 +44,34 @@ var answerPage = Page.extend({
     },
 
     diamond: function() {
-      // this.flashBackground('right');
+      this.flashBackground('right');
       this.checkAnswer('diamond');
     },
 
     square: function() {
-      // this.flashBackground('left');
+      this.flashBackground('left');
       this.checkAnswer('square');
     },
 
     triangle: function() {
-      // this.flashBackground('bottom');
+      this.flashBackground('bottom');
       this.checkAnswer('triangle');
     },
 
     circle: function() {
-      // this.flashBackground('top');
+      this.flashBackground('top');
       this.checkAnswer('circle');
     },
 
-    // TODO: add jquery so flash background would work
-
-    // flashBackground: function(button) {
-    //   var $layout = $('.answer-page-layout');
-    //   $layout.addClass('clicked-' + button);
-    //   setTimeout(function() {
-    //     $layout.removeClass('clicked-' + button);
-    //   }, 1000);
-    // },
+    flashBackground: function(button) {
+      this.objects.flash = 'clicked-' + button;
+      this.render();
+      var self = this;
+      setTimeout(function() {
+        self.objects.flash = '';
+        self.render();
+      }, 1000);
+    },
 
     goToFeedbackPage: function() {
       window.App.data.isCorrect = this.isCorrect;
