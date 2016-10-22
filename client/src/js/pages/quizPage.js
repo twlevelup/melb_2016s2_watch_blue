@@ -20,6 +20,9 @@ var quizPage = Page.extend({
         return this;
       },
     initialize: function () {
+      this.question = [];
+      window.App.data.question = this.question;
+      this.objects.questionShapes = '';
       for (var i = 1; i <= this.difficulty; i++) {
         var randomNumber = Math.floor(Math.random() * (shapes.length)) % 4;
         this.question.push(shapes[randomNumber])
@@ -30,7 +33,8 @@ var quizPage = Page.extend({
       var self = this;
       setTimeout(function() {
         self.goToAnswerPage(); 
-      }, 7000);
+        this.question = [];
+      }, 5000);
     },
     generateShapeHTML: function(shape) {
       return '<div class=\'' + shape +' large\'></div>'
