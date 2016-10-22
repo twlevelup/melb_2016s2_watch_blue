@@ -15,24 +15,9 @@ describe('The Quiz Page', function() {
             expect(page.$el).toContainText('');
           });
 
-        it('should contain a square', function() {
+        it('should contain at least one shape', function() {
             page.render();
-            expect(page.$el).toContainElement('.square');
-          });
-
-        it('should contain a circle', function() {
-            page.render();
-            expect(page.$el).toContainElement('.circle');
-          });
-
-        it('should contain a diamond', function() {
-            page.render();
-            expect(page.$el).toContainElement('.diamond');
-          });
-
-        it('should contain a triangle', function() {
-            page.render();
-            expect(page.$el).toContainElement('.triangle');
+            expect(page.$el).toContainElement('#shape');
           });
 
       });
