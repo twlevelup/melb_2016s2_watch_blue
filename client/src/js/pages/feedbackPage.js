@@ -1,33 +1,31 @@
 'use strict';
 
 var Page = require('watch_framework').Page;
-var isCorrect = true;
 var feedbackPage = Page.extend({
 
   id: 'feedback',
+  template: require('../../templates/pages/feedback.hbs'),
+  objects: { feedback: '' },
+  isCorrect: false,
+  correctAnswer: ['Good job!', 'Awesome!', 'Excellent!', 'You\'re rad!'],
+  incorrectAnswer: ['Try again!', 'Better luck next time!', 'Oops!', 'Bad luck!'],
+  initialize: function() {
+    this.isCorrect = window.App.data.isCorrect;
+  },
 
-  //input array and randomly output the index
-  //chooseAnswer: function() {
-  //},
-
-  displayAnswer: function() {
-    //message from random number generator
+  generateFeedback: function(isCorrect) {
+    var randomNumber = Math.floor(Math.random() * this.correctAnswer.length) % this.correctAnswer.length;
     if (isCorrect) {
-      var correctAnswer = ['Good Job!','Awesome!','Excellent!', 'You\'re Rad!'];
-      var randomNum = Math.floor(Math.random() * 10);
-      var index = randomNum % correctAnswer.length;
-      document.write(correctAnswer[index]);
-    }
-    else
-        {
-      var index = chooseAnswer(incorrectAnswer);
-      document.write(incorrectAnswer[index]);
+      this.objects.feedback = this.correctAnswer[randomNumber];
+    } else {
+      this.objects.feedback = this.incorrectAnswer[randomNumber];
     }
   },
 
   render: function() {
-    // var incorrectAnswer = ['Try Again!','Better Luck Next Time!','OOPPS!'];
-    this.displayAnswer();
+    this.generateFeedback(this.isCorrect);
+    this.$el.html(this.template(this.objects));
+    return this;
   }
 
 });
